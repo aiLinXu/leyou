@@ -19,3 +19,11 @@ zuul:
   prefix: /api # 添加路由前缀
   routes:
     item-service: /item/** # 将商品微服务映射到/item/**
+mybatis:
+  mapper-locations: mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.leyou.item.entity
+
+mapper:
+  wrap-keyword: "`{0}`"
